@@ -25,9 +25,9 @@ momObj.prototype.draw = function(){
 	frontCtx.save();
 	frontCtx.translate(this.x, this.y);
 	frontCtx.rotate(this.angle);
-	frontCtx.drawImage(this.bigEye, -this.bigEye.width * 0.5, -this.bigEye.height * 0.5);
-	frontCtx.drawImage(this.bigBody, -this.bigBody.width * 0.5, -this.bigBody.height * 0.5);
 	frontCtx.drawImage(this.bigTail, -this.bigTail.width * 0.5 + 30, -this.bigTail.height * 0.5);
+	frontCtx.drawImage(this.bigBody, -this.bigBody.width * 0.5, -this.bigBody.height * 0.5);
+	frontCtx.drawImage(this.bigEye, -this.bigEye.width * 0.5, -this.bigEye.height * 0.5);
 
 	frontCtx.restore();
 }

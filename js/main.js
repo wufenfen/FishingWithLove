@@ -6,7 +6,7 @@ var bgPic = new Image();
 var canWidth, canHeight;
 var ane, fruit;
 
-var mom;
+var mom, baby;
 
 var mx, my; //mouse position
 
@@ -41,6 +41,9 @@ function init() {
 	mom = new momObj();
 	mom.init();
 
+	baby = new babyObj();
+	baby.init();
+
 
 }
 
@@ -48,7 +51,9 @@ function gameLoop() {
 	window.requestAnimFrame(gameLoop);
 	deltaTime = Date.now() - lastTime;
 	lastTime = Date.now();
-
+	if( deltaTime > 50 ){
+		deltaTime = 50;
+	}
 	drawBackground(); 
 	ane.draw(); 
 	fruitMonitor();
@@ -56,6 +61,9 @@ function gameLoop() {
 
 	frontCtx.clearRect(0, 0, canWidth, canHeight);
 	mom.draw();
+	baby.draw();
+
+	fruitEatenByMom();
 }
 
 function onMouseMove(e){
