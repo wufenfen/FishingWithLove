@@ -6,7 +6,7 @@ var bgPic = new Image();
 var canWidth, canHeight;
 var ane, fruit;
 
-var mom, baby;
+var mom, baby, data;
 
 var mx, my; //mouse position
 
@@ -24,8 +24,11 @@ function init() {
 	frontCtx = frontCanvas.getContext('2d');
 	backCanvas = document.getElementById("back");
 	backCtx = backCanvas.getContext('2d');
+	backCtx.font= "30px Arial";
+	backCtx.textAlign = "center";
 	mx = 0;
 	my = 0;
+	data = new dataObj();
 	frontCanvas.addEventListener('mousemove', onMouseMove);
 
 	canWidth = frontCanvas.width;
@@ -44,7 +47,6 @@ function init() {
 	baby = new babyObj();
 	baby.init();
 
-
 }
 
 function gameLoop() {
@@ -54,6 +56,7 @@ function gameLoop() {
 	if( deltaTime > 50 ){
 		deltaTime = 50;
 	}
+
 	drawBackground(); 
 	ane.draw(); 
 	fruitMonitor();
@@ -64,9 +67,15 @@ function gameLoop() {
 	baby.draw();
 
 	fruitEatenByMom();
+	momFeedBaby();
+
+	data.draw();
 }
 
 function onMouseMove(e){
+	if(data.gameOver){
+		return;
+	}
 	mx = e.offsetX;
 	my = e.offsetY;
 }
