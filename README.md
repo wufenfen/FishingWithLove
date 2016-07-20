@@ -1,7 +1,7 @@
 # FishingWithLove 2016.7.20
 html5 Game , learned from imooc 
 
-[demo](wufenfen.github.com/FishingWithLove)
+[demo演示](https://wufenfen.github.io/FishingWithLove/)
 
 ## 游戏规则
 鱼宝宝一直需要食物，鱼妈妈需要吃到果实，定时地喂给鱼宝宝。
