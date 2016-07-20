@@ -4,7 +4,7 @@ var lastTime, deltaTime;
 var bgPic = new Image(); 
 
 var canWidth, canHeight;
-var ane, fruit;
+var ane, fruit, wave, halo, dust;
 
 var mom, baby, data;
 
@@ -47,6 +47,14 @@ function init() {
 	baby = new babyObj();
 	baby.init();
 
+	wave = new waveObj();
+	wave.init();
+
+	halo = new haloObj();
+	halo.init();
+
+	dust = new dustObj();
+	dust.init();
 }
 
 function gameLoop() {
@@ -70,6 +78,9 @@ function gameLoop() {
 	momFeedBaby();
 
 	data.draw();
+	wave.draw();
+	halo.draw();
+	dust.draw();
 }
 
 function onMouseMove(e){

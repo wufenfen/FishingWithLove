@@ -63,7 +63,8 @@ babyObj.prototype.draw = function(){
 	if( this.bodyTimer > 200){
 		if(this.bodyIndex>19){
 			this.bodyIndex = 19;
-			data.gameOver = true;// 
+			data.gameOver = true;// game over
+			mom.bodyIndex = 0;
 		} 
 		this.babyBody.src= this.bodyArr[this.bodyIndex].src;
 		this.bodyIndex++ ; 
