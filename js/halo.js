@@ -33,9 +33,7 @@ haloObj.prototype.draw = function(){
 			backCtx.beginPath();
 			backCtx.arc(this.x, this.y, this.r[i], 0, 2*Math.PI);
 			backCtx.strokeStyle = "rgba(200,100,0," + alpha + ")";
-			backCtx.stroke();
-
-			console.log("draw");
+			backCtx.stroke(); 
 		}
 	}
 	backCtx.restore();
