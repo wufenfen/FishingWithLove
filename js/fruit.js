@@ -27,7 +27,6 @@ fruitObj.prototype.init = function(){
 
 	this.orange.src = "./src/fruit.png";
 	this.blue.src = "./src/blue.png";
-
 }
 
 fruitObj.prototype.draw = function(){

@@ -24,7 +24,7 @@ dataObj.prototype.draw = function(){
  
 	if(this.gameOver){
 	 	if( this.alpha< 1){
-	 		this.alpha += 0.005;
+	 		this.alpha += 0.01;
 	 	}
 		backCtx.fillStyle = "rgba(255,255,255," + this.alpha + ")";
 		backCtx.fillText("GAMEOVER", canWidth*0.5, canHeight*0.5);
