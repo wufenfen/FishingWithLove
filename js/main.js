@@ -10,10 +10,18 @@ var mom, baby, data;
 
 var mx, my; //mouse position
 
-document.body.onload = playGame;
+var resetBtn;
 
-function playGame (argument) {
-	init();
+document.body.onload = function(){
+	resetBtn = document.getElementById("reset");
+	resetBtn.onclick = function(){
+		playGame(); 
+	};
+	playGame();
+};
+
+function playGame (argument) { 
+	init(); 
 	lastTime = Date.now();
 	deltaTime = 0;
 	gameLoop();
@@ -26,13 +34,13 @@ function init() {
 	backCtx = backCanvas.getContext('2d');
 	backCtx.font= "30px Arial";
 	backCtx.textAlign = "center";
-	mx = 0;
-	my = 0;
-	data = new dataObj();
+	data = new dataObj(); 
 	frontCanvas.addEventListener('mousemove', onMouseMove);
 
 	canWidth = frontCanvas.width;
 	canHeight = frontCanvas.height; 
+	mx = canWidth*Math.random();
+	my = canHeight*Math.random();
 	bgPic.src = "./src/background.jpg";
 
 	ane = new aneObj();
@@ -80,7 +88,7 @@ function gameLoop() {
 	data.draw();
 	wave.draw();
 	halo.draw();
-	dust.draw();
+	dust.draw(); 
 }
 
 function onMouseMove(e){

@@ -22,12 +22,23 @@
 			top: 0;
 		}
 
+		#reset {
+		    position: absolute;
+		    top: 620px;
+		    left: 400px;
+		    transform: translate(-50%, 0); 
+		    font-size: 24px;
+		    background-color: #252592;
+		    color: white;
+		    font-weight: bold; 
+		}
 	</style>
 </head>
 <body>
 	<div class="content">
 		<canvas id="back"  width="800" height="600"> </canvas>
 		<canvas id="front" width="800" height="600"> </canvas>
+		<button id="reset">  重新开始 </button>
 	</div>
 	<script src="js/main.js"></script>
 	<script src="js/commonFunctions.js"></script>
@@ -41,8 +52,8 @@
 	<script src="js/wave.js"></script>
 	<script src="js/halo.js"></script>
 	<script src="js/dust.js"></script>
-	<script>
-		window.alert("游戏规则：鱼妈妈把吃到的果实喂给鱼宝宝，当鱼宝宝的身体由红色变成白色的时候，游戏结束。");
-	</script>
+	 <script>
+	// 	window.alert("游戏规则：鱼妈妈把吃到的果实喂给鱼宝宝，当鱼宝宝的身体由红色变成白色的时候，游戏结束。");
+	// </script>
 </body>
 </html>
